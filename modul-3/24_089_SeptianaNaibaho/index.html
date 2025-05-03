@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+    <!-- Navbar -->
+    <header class="flex justify-between items-center px-10 py-6 shadow">
+      <h1 class="text-xl font-bold text-blue-600">Septiana</h1>
+      <nav class="space-x-6 text-sm font-medium">
+        <a href="#hero" class="hover:text-blue-500">Home</a>
+        <a href="#about" class="hover:text-blue-500">About Me</a>
+        <a href="#education" class="hover:text-blue-500">Education</a>
+        <a href="#contact" class="hover:text-blue-500">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="flex flex-col md:flex-row items-center justify-between px-10 py-20 max-w-7xl mx-auto">
+      <!-- Text -->
+      <div class="md:w-1/2 mb-10 md:mb-0">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Hallo Semua 👋</h2>
+        <h3 class="text-3xl md:text-4xl font-semibold mb-4">
+          Aku <span class="text-blue-600">Septiana Naibaho</span><br />
+          seorang <span class="text-blue-500">Mahasiswa</span>
+        </h3>
+        <p class="text-gray-600 mb-6">Dengan semangat belajar dan ketekunan, aku terus mengasah kemampuan 
+            di dunia teknologi dan desain untuk menciptakan solusi yang berdampak..</p>
+      </div>
+
+      <!-- Image -->
+      <div class="md:w-1/2 flex justify-center">
+        <img src="gambar/foto.jpg" alt="Foto Septiana Naibaho" class="w-80 md:w-96 rounded-xl shadow-lg" />
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="bg-blue-100 py-16">
+      <div class="max-w-7xl mx-auto px-10">
+        <h2 class="text-3xl font-bold text-center text-blue-600 mb-8">About Me</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">
+            Saya adalah pribadi yang menyukai dunia teknologi, seni visual, dan kreativitas. Saya memiliki ketertarikan besar dalam fotografi menggunkan hp, memasak serta desain kreatif.
+            Melalui fotografi, saya suka menangkap momen-momen sederhana namun bermakna dalam kehidupan sehari-hari. Memasak menjadi salah satu cara saya untuk berkreasi dan mencoba resep baru. Selain itu, saya ingin mendalami bidang desain, seperti UI/UX dan Web.
+            Bagi saya, mengeksplorasi minat dan mengasah kreativitas adalah perjalanan terbaik yang tak pernah berhenti. Setiap langkah memberikan peluang untuk belajar, tumbuh dan menemukan ide-ide baru yang memperkaya pengalaman serta memperluas batasan kreativitas.
+        </p>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="bg-white py-16">
+      <div class="max-w-7xl mx-auto px-10">
+        <h2 class="text-3xl font-bold text-center text-blue-600 mb-10">Pendidikan</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-semibold text-blue-700">Universitas Trunojoyo Madura</h3>
+            <p class="text-gray-700 mt-2">S1 Sistem Informasi</p>
+            <p class="text-sm text-gray-600 mt-1">Mempelajari berbagai bidang seperti pemrograman, analisis sistem, desain UI/UX, basis data, dan pengembangan web.</p>
+          </div>
+          <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-semibold text-blue-700">SMA Negeri 1 Silaen</h3>
+            <p class="text-gray-700 mt-2">Jurusan IPA</p>
+            <p class="text-sm text-gray-600 mt-1">Aktif dalam kegiatan akademik dan organisasi siswa. Mengikuti ekstrakurikuler olimpiade Kimia dan mengikuti OSN Kimia.</p>
+          </div>
+          <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-semibold text-blue-700">SMP Budhi Dharma Balige</h3>
+            <p class="text-sm text-gray-600 mt-1">Berfokus pada pelajaran dasar seperti matematika, bahasa Indonesia, IPA, dan IPS. Aktif dalam kegiatan ekstrakurikuler seperti bahasa inggris dan seni.</p>
+          </div>
+          <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-semibold text-blue-700">SD Negeri Hutanamora</h3>
+            <p class="text-sm text-gray-600 mt-1">Menekuni pelajaran dasar dan membangun keterampilan sosial melalui berbagai kegiatan seni dan karate.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-blue-100 py-16">
+        <div class="max-w-3xl mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center text-blue-600 mb-8">Contact me</h2>
+          <div class="flex flex-col md:flex-row justify-around items-start gap-8 text-gray-700">
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Email</h3>
+              <p><a href="email:@septiananaibaho.com" class="text-blue-600 hover:underline">@septiananaibaho.com</a></p>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Telepon</h3>
+              <p><a href="tel:+628123456789" class="text-blue-600 hover:underline">+62 812-3456-789</a></p>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Media Sosial</h3>
+              <p>
+                <a href="#" class="text-blue-600 hover:underline">Instagram</a> <br>
+                <a href="#" class="text-blue-600 hover:underline">LinkedIn</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>      
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white py-6 mt-16">
+      <div class="max-w-7xl mx-auto px-10 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-sm">&copy; 2025 Septiana Naibaho. All rights reserved.</p>
+        <div class="space-x-4 mt-4 md:mt-0">
+          <a href="mailto:email@example.com" class="hover:underline">Email</a>
+          <a href="#" class="hover:underline">LinkedIn</a>
+          <a href="#" class="hover:underline">Instagram</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
