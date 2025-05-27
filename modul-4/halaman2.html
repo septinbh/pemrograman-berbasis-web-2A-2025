@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Pendaftaran</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class'
+      };
+    </script>
+  </head>
+
+  <body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white transition-all">
+    <!-- Tombol Pindah Mode -->
+    <div class="flex justify-end p-4">
+      <button onclick="toggleMode()" id="modeBtn"
+        class="bg-purple-100 dark:bg-purple-800 dark:text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-purple-200 dark:hover:bg-purple-700 transition">
+        Pindah Mode
+      </button>
+    </div>
+
+    <!-- Kontainer Utama -->
+    <div class="w-screen max-w-5xl mx-auto my-10 bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg flex flex-col md:flex-row">
+      
+      <!-- Bagian Kiri (Ilustrasi) -->
+      <div class="bg-[#4b1bbd] flex items-center justify-center p-6 md:w-1/2 w-full">
+        <img src="Gambar 5.png" alt="Illustration" class="max-w-full h-auto" />
+      </div>
+
+      <!-- Bagian Kanan (Formulir) -->
+      <div class="p-10 md:w-1/2 w-full">
+        <!-- Logo dan Judul -->
+        <div class="flex items-center mb-6">
+          <img src="Logo-.png" alt="logo" class="w-6 h-6 mr-2" />
+          <h1 class="text-xl font-bold text-[#1d0d64] dark:text-white">ByteAcademy</h1>
+        </div>
+
+        <h2 class="text-2xl font-bold mb-1">Mulai Hari Ini</h2>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mb-6">Menunggu besok? Bisa jadi kamu takkan pernah mulai.</p>
+
+        <!-- Formulir Pendaftaran -->
+        <form id="signupForm">
+          <div class="mb-4">
+            <label class="block text-sm font-medium mb-1">Alamat Email</label>
+            <input type="email" id="email" placeholder="Masukkan Alamat Email Anda"
+              class="w-full px-4 py-2 rounded-full border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white text-black dark:bg-gray-700 dark:text-white" />
+            <p id="emailError" class="text-red-500 text-sm mt-1 hidden">Email tidak valid.</p>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-sm font-medium mb-1">Nama Lengkap</label>
+            <input type="text" id="fullname" placeholder="Masukkan Nama Lengkap Anda"
+              class="w-full px-4 py-2 rounded-full border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white text-black dark:bg-gray-700 dark:text-white" />
+            <p id="nameError" class="text-red-500 text-sm mt-1 hidden">Nama lengkap wajib diisi.</p>
+          </div>
+
+          <div class="mb-6">
+            <label class="block text-sm font-medium mb-1">Password</label>
+            <input type="password" id="password" placeholder="Masukkan Password Anda"
+              class="w-full px-4 py-2 rounded-full border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 dark:bg-gray-700 dark:text-white" />
+            <p id="passError" class="text-red-500 text-sm mt-1 hidden">Password minimal 6 karakter.</p>
+          </div>
+
+          <!-- Tombol Sign Up -->
+          <button type="submit"
+            class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-full font-medium transition duration-200 mb-4">
+            Sign In
+          </button>
+
+          <!-- Tombol Google -->
+          <button type="button"
+            class="w-full border border-gray-300 dark:border-gray-600 py-2 rounded-full flex items-center justify-center text-sm font-medium text-gray-700 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700">
+            <img src="ic_google.png" class="w-5 h-5 mr-2" alt="Google" />
+            Sign Up with Google
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+
+      // Toggle dark mode saat tombol diklik
+      function toggleMode() {
+        const html = document.documentElement;
+        const isDark = html.classList.toggle('dark');
+      }
+
+      // Validasi Formulir
+      document.getElementById('signupForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const email = document.getElementById('email').value.trim();
+        const fullname = document.getElementById('fullname').value.trim();
+        const password = document.getElementById('password').value.trim();
+
+        const emailError = document.getElementById('emailError');
+        const nameError = document.getElementById('nameError');
+        const passError = document.getElementById('passError');
+
+        emailError.classList.add('hidden');
+        nameError.classList.add('hidden');
+        passError.classList.add('hidden');
+
+        let valid = true;
+
+        if (!/^\S+@\S+\.\S+$/.test(email)) {
+          emailError.classList.remove('hidden');
+          valid = false;
+        }
+
+        if (fullname === "") {
+          nameError.classList.remove('hidden');
+          valid = false;
+        }
+
+        if (password.length < 6) {
+          passError.classList.remove('hidden');
+          valid = false;
+        }
+
+        if (valid) {
+          alert("Form berhasil dikirim!");
+        }
+      });
+    </script>
+  </body>
+</html>
